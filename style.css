@@ -24,7 +24,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     background-color: white; /* Soft pink */
-    color: 1f1f1f;
+    color: #1f1f1f;
     border-radius: 5px;
     margin-top: 35px;
     transition: all 0.3s ease;
@@ -58,13 +58,13 @@ button:hover {
 
 
 
-.container h1 {
+.container h1{
     overflow: hidden;
     margin: 0;
     border-right: .15em solid #303030;
     letter-spacing: .15em;
     font-family: "Danfo", serif;
-    color: #303030;
+    color: #00945a;
     font-size: 3em; /* Increase heading size */
     animation:
     typing 3.5s steps(30, end),
@@ -74,13 +74,26 @@ button:hover {
     padding-top: 20px; */
 }
 
-.content h1{
+.content #birthday{
     line-height: 20px;
-    font-family: "Rowdies", sans-serif;
-    font-size: 40px;
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
     /* letter-spacing: .1em; */
     word-spacing: .0em;
-    color: #303030;
+    color: #00945a;
+}
+
+.content #birthday2{
+    line-height: 20px;
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
+    /* letter-spacing: .1em; */
+    word-spacing: .0em;
+    color: #00945a;
 }
 
 @keyframes typing {
@@ -142,8 +155,11 @@ button:hover {
       width: 80%; /* Adjust photo width for mobile */
     }
 
-    .container h1,
-    .content h1 {
+    .container h1 {
       font-size: 2em; /* Reduce heading size for mobile */
+    }
+
+    .content #birthday, .content #birthday2 {
+        font-size: 2.5em;
     }
 }
