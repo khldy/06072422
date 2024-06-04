@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="birthday-page">
+    <div class="content">
+        <img src="HBD.jpg" alt="Friend's Photo" class="photo">
+        <h1 id="birthday2">İYİ Kİ DOĞDUN</h1>
+        <h1 id="birthday">İYİ Kİ VARSIN</h1>
+    </div>
+    <div class="confetti"></div>
+    </body>
+    <script>
+        function stopConfetti() {
+    const confettiContainer = document.querySelector('.confetti');
+    confettiContainer.style.display = 'none'; // Hide the confetti container after 1 second
+    }
+
+        function createConfetti() {
+    const confettiContainer = document.querySelector('.confetti');
+    for (let i = 0; i < 100; i++) {
+    const confetti = document.createElement('div');
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.top = Math.random() * -100 + 'vh';
+    confettiContainer.appendChild(confetti);
+    }
+}
+
+createConfetti(); // Call the function to create confetti on page load
+setTimeout(stopConfetti, 2000);
+
+    </script>
+</html>

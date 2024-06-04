@@ -1,0 +1,149 @@
+body {
+    background-color: #edc343;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    font-family: "Source Sans Pro", sans-serif; /* Modern font */
+}
+
+body.birthday-page {
+    background-color: #edc343;
+}
+
+.container, .content {
+    text-align: center;
+}
+
+button {
+    border: 1px solid #1f1f1f;;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white; /* Soft pink */
+    color: 1f1f1f;
+    border-radius: 5px;
+    margin-top: 35px;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid #1f1f1f;;
+}
+
+button:hover {
+    background-color: #f5a13e; /* Hot pink on hover */
+}
+
+.birthday-page {
+    background-color: #FFE0E6; /* Light pink */
+    color: #333; /* Darker text for better contrast */
+}
+
+.photo {
+    color: #1f1f1f;
+    border: 3px solid #303030;
+    width: 500px;
+    height: auto;
+    border-radius: 3%;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 0px 0px #303030,
+                2px 2px 0px 0px #303030,
+                3px 3px 0px 0px #303030,
+                8px 8px 0px 0px #303030,
+                8px 8px 0px 0px #303030;
+    ;
+    margin-bottom: 50px;
+}
+
+
+
+.container h1 {
+    overflow: hidden;
+    margin: 0;
+    border-right: .15em solid #303030;
+    letter-spacing: .15em;
+    font-family: "Danfo", serif;
+    color: #303030;
+    font-size: 3em; /* Increase heading size */
+    animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite
+    ;
+    /* padding-bottom: 20px;
+    padding-top: 20px; */
+}
+
+.content h1{
+    line-height: 20px;
+    font-family: "Rowdies", sans-serif;
+    font-size: 40px;
+    /* letter-spacing: .1em; */
+    word-spacing: .0em;
+    color: #303030;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%}
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% {border-color: #303030}
+}
+
+.confetti {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.confetti div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.8);
+    animation: confetti-fall linear infinite;
+}
+
+@keyframes confetti-fall {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+.confetti div:nth-child(odd) {
+    background: rgba(255,182,193,0.8);
+    animation-duration: 3s;
+}
+
+.confetti div:nth-child(even) {
+    background: rgba(255,105,180,0.8);
+    animation-duration: 2s;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Styles for screens smaller than 768px (typical mobile breakpoint) */
+
+    body {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically on mobile */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container, .content {
+      margin: 0 auto; /* Center elements horizontally on mobile */
+    }
+
+    .photo {
+      width: 80%; /* Adjust photo width for mobile */
+    }
+
+    .container h1,
+    .content h1 {
+      font-size: 2em; /* Reduce heading size for mobile */
+    }
+}
