@@ -35,6 +35,7 @@ button:hover {
     background-color: #f5a13e; /* Hot pink on hover */
 }
 
+
 .birthday-page {
     background-color: #FFE0E6; /* Light pink */
     color: #333; /* Darker text for better contrast */
@@ -156,7 +157,7 @@ button:hover {
     }
 
     .container h1 {
-      font-size: 2em; /* Reduce heading size for mobile */
+      font-size: 2.7em; /* Reduce heading size for mobile */
     }
 
     .content #birthday, .content #birthday2 {
